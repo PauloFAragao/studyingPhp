@@ -11,9 +11,9 @@
             
             $nome = array();//string
 
-            $nome[0] = "registroProfissional";
-            $nome[1] = "curso";
-            $nome[2] = "sexo";
+            $nome[0] = "corPelo";
+            $nome[1] = "idade";
+            $nome[2] = "membros";
 
             for( $i=0; $i<count($nome); $i++ )
             {
