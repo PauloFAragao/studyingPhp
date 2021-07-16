@@ -28,7 +28,9 @@
             while( $rows_nomes = mysqli_fetch_array($resultado_nomes) )
             {
                 echo '<table class="table table-hover"> 
-                <td width="5%" align="left">'.$rows_nomes["id"].'</td> 
+                <td width="5%" align="left"> 
+                <a href="editar.php?id='.$rows_nomes["id"].'" title="Editar">'
+                .$rows_nomes["id"].'</a></td> 
                 <td width="25%" align="left">'.$rows_nomes["nome"].'</td> 
                 <td width="25%" align="left">'.$rows_nomes["email"].'</td> 
                 </table>';
