@@ -1,3 +1,7 @@
+<?php 
+    include_once"Manager.php";
+    $manager = new Manager();
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
@@ -33,12 +37,13 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
+                            <?php foreach($manager->listCostume("clientes") as $c): ?>
+                            <td><?= $c['nome']; ?></td>
+                            <td><?= $c['email']; ?></td>
+                            <td><?= $c['cpf']; ?></td>
+                            <td><?= $c['dtnascimento']; ?></td>
+                            <td><?= $c['endereco']; ?></td>
+                            <td><?= $c['telefone']; ?></td>
                             <td>
                                 <form method="POST" action="#">
                                     <button class="btn btn-warning btn-xs"><i class="fa fa-user-edit"></i> </button>
@@ -49,7 +54,9 @@
                                     <button class="btn btn-danger btn-xs"><i class="fa fa-trash"></i> </button>
                                 </form>
                             </td>
+                            
                         </tr>
+                        <?php endforeach; ?>
                     </tbody>
                 </table>
             </div>
